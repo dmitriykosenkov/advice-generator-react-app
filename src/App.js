@@ -15,7 +15,6 @@ function App() {
       }
       fetchData()
    }, [fetching]);
-   console.log(advice);
    return (
       <div className={s.wrapper}>
          <div className={s.container}>
