@@ -1,0 +1,64 @@
+@import "./vars.scss";
+
+.wrapper {
+   text-align: center;
+}
+.conatiner {
+   // padding: 0 15px;
+}
+.card {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0 15px;
+}
+
+.cardInner {
+   background-color: $darkGrayishBlue;
+   @include adaptiveValue("max-width", 450, 320, 0);
+   border-radius: 20px;
+   @include adaptiveValue("padding", 50, 20, 0);
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   @include adaptiveValue("gap", 20, 15, 0);
+   box-shadow: 25px 27px 72px -2px rgba(0, 0, 0, 0.61);
+   -webkit-box-shadow: 25px 27px 72px -2px rgba(0, 0, 0, 0.61);
+   -moz-box-shadow: 25px 27px 72px -2px rgba(0, 0, 0, 0.61);
+   @media (max-width: 768px){
+        padding-bottom: 32px;
+   }
+}
+.cardSubtitle {
+   color: $neonGreen;
+   font-size: 10px;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+}
+.cardTitle {
+
+}
+.cardDivider {
+   img {
+      width: 100%;
+   }
+}
+.cardIcon {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translate(-50%, 50%) scale(1);
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: $neonGreen;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all ease 0.3s;
+   &:hover {
+      transform: translate(-50%, 50%) scale(1.2);
+   }
+}
